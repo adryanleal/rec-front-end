@@ -1,0 +1,750 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<html><script language="javascript">op="";//operadores globais.
+num1="0";
+
+num2="0";
+
+resp="";
+
+PrimeiroNumero=true;
+PontoDecimal=false;
+
+memoria="";
+
+<!-->
+
+
+
+function verificatecla(caracter){
+
+if(window.event) { // Internet Explorer
+
+var tecla = event.keyCode;
+
+//alert (Primeiro Numero);
+
+if((tecla > 47) && (tecla < 58)) { // Se for número tecla tecla - 48;
+
+inostra(tecla);}
+
+if (tecla == 46){ // Se for ponto .
+
+mostra(".");
+
+}
+
+if (tecla == 43){ //Se for + 
+coleta("+");}
+
+if (tecla == 45){ // se for - 
+coleta("-");}
+
+if (tecla == 47){ 
+coleta("/");} // se for /
+
+if (tecla == 42){ 
+coleta("*");} // se for *
+
+if (tecla == 13) { 
+calcula();}
+
+if ((tecla == 44) || (tecla == 27)){ // Se for DEL ou ESC Atalho para Cancela Memória 
+novocalculo();}
+
+if ((tecla == 109) || (tecla == 77)){ // Se for m ou M Atalho para Memória 
+memo();}
+
+if ((tecla == 82) || (tecla == 114)){ // Se for r ou R. Atalho para chamar memória 
+chamamem();}
+
+if ((tecla == 99) || (tecla == 67)){ // Se for c ou C Atalho para cancelar memória cancelamemoria();}
+
+document.formulario.vazio.focus();
+}
+}
+
+function inicio(){
+
+document.formulario.calculo.value="0";
+
+document.formulario.calculo.style.color = "#0000FF";
+
+formulario.calculo.style.background = "DDDDDD";
+
+document.formulario.vazio.focus();
+
+}
+
+function mostra(x){
+
+if (PrimeiroNumero == true){
+
+document.formulario.calculo.value="0";} if
+
+((PrimeiroNumero== true) && (x!= "")){ document.formulario.calculo.value="";}
+primeiroNumero=false;
+If((x=="." && PontoDecimal==false) || (x!="."))
+ Document.formulario.calculo.value += x; //essa função vai mostrando os números na caixa de texto
+!-alinhadireita();-//e o +- vai concateando um número após o outro 
+
+If(x==".")
+PontoDecimal=true;}
+}
+
+ inverter()
+Varn=eval(document.formulario.calculo.value);
+N = 1/n;
+Document.formulario.calculo.value=n;
+primeiroNumero=true
+PontoDecimal=false;
+Num1=n
+Op='';
+
+
+function coleta(y){
+
+op=y; //atribui o valor a variavel op o caracter +ou- etc.. conforme o clicado no botao
+num1=eval(document.formulario.calculo.value);} //atribui a num1 o valor da caixa de texto
+
+{ //limpa a caixa de texto
+
+num2=eval(document.formulario.calculo.value);
+
+document.formulario.calculo.value=eval(num1 +op + num2);
+
+num1=eval(num1 + op + num2 );
+
+op = y
+
+}
+
+
+ calulca ()
+PontoDecimal=false;
+If(Op!='')
+num2=document.formulario.calculo.value; //num2 recebe oque esta na caixa de texto. 
+resp=eval(num1 + op + document.formulario.calculo.value); //resp recebe o valor do num1+op+num2, exemplo 2+3
+document.formulario.calculo.value=eval(resp);//retorna o valor dos mesmos 2+3 como resposta na caixa de texto devido ao eval
+
+num1=eval(resp); //se o eval nao estivesse ai apareceria na caixa de texto 2+3. O eval retorna ovalor do 2+3
+
+num2="0";
+
+op=
+
+
+
+
+function chamamem() 
+
+
+PrimeiroNumero;=true;
+
+PontoDecimal=false;
+
+if ("op==")
+
+num1=memoria;
+
+document.formulario.calculo.value=num1;
+
+else{
+
+num2=memoria;
+
+document.formulario.calculo.value=num2;}
+
+
+
+Function cancelamentos(){
+Memória=0;
+Document.formulario.mem.style.color = "#000000";
+}
+
+function novocalculo(){//essa função permite fazer mais um calculo.
+
+num1="";//limpa as variaveis
+
+num2="";
+
+op="";
+
+resp="";
+
+document.formulario.calculo.value="0";//limpa a caixa de texto
+
+PrimeiroNumero=true;
+
+PontoDecimal=false;
+
+}
+
+function raiz(){ 
+
+resp=Math.sqrt(num1);}
+
+
+function sen(){ calcula o cosseno
+
+num1=document.formulario.calculo.value;
+
+document.formulario.calculo.value= "";
+
+resp=Math.cos(num1);
+
+document.formulario.calculo.value=eval(resp); }
+
+
+function sen(){
+num1=document.formulario.calculo.value; 
+
+document.formulario.calculo.value="; 
+
+resp=Math.sin(num1)=
+
+document.formulario.calculo.value=eval(resp); }
+
+
+function tan(){ 
+num1=document.formulario.calculo.value; 
+document.formulario.calculo.value=''; resp=Math.tan(num1);
+
+document.formulario.calculo.value=eval(resp); }
+
+
+function limpa(){
+
+document.formulario.calculo.value="0"; PontoDecimal=false;
+
+<body bgcolor="#000000" onLoad="inicio()" onKeyPress="verificatecla (event)"> <!-aqui co-
+
+
+Primeiro Numero=true;
+
+}
+
+</script>
+
+meça o html->
+
+<center>
+
+<table border="10" cellspacing="0" cellpadding="2" bordercolor="#FF3300">
+
+<tr>
+
+<td align="center" colspan="3"><form name="formulario"> <!-aqui foi criado um formulario para a caixa de texto,e un objeto chamado formulario->
+
+</tr>
+
+<input type="text" id="calculo" size "26" style="text-align:right;"></td>
+
+<tr><!-começo da tabela->
+
+<td align="center" colspan="2"><input type="button" value="M+" name="mem" style="WIDTH: 70px;font-weight: bold" id="mem1" onclick="memo();"></td><!-onclick chama a função mostra quando clicado->
+
+<td align="center"><input type="button" value="MR" style="WIDTH: 30por;font-weight: bold" id="botaoMR" onclick="chamamem();"></td>
+
+<td align="center"><input type="button" value="MC" style="WIDTH: 30px;font-weight: bold" id="botaoMC" onclick="cancelamemoria();"></td><!-chama a funçao coleta->
+
+<td align="center"><input type="button" value="C" id="rest" style="WIDTH: 30px; font-weight: bold" onclick="novocalculo();"></td> <!-chama a função raiz->
+
+</tr>
+
+<tr>
+
+<td align="center"><input type="button" value="7" style="WIDTH: 30px;" id="botao?" onclick="mostra(7);"></td><!-onclick chama a função mostra quando clicado->
+
+<td align="center"><input type="button" value="8" style="WIDTH: 30px;" id="botao8" onclick "mostra(8);"></td>
+
+<td align="center"><input type="button" value="9" style="WIDTH: 30px;" id="botao9" onclick="mostra(9);"></td>
+
+<td align="center"><input type="button" value="/" style="WIDTH: 30px;" id="botao/" onclick="coleta('/');"></td>
+
+<td align="center"><input type="button" value="CE" style="WIDTH: 30px;" id="limpal" on- click "limpa();"> </ul> </tr>
+
+<td align="center"><input type="button" value="4" style="WIDTH: 30px;" id="hotao4" onclick="mostra (4);"></td>
+
+<td align="center"><input type="button" value="5" style="WIDTH: 30px;" id="botao5" onclick="mostra(5);"></td>
+
+<td align="center"><input type="button" value="6" style="WIDTH: 30px;" id="botao6" onclick="mostra(6);"></td>
+
+<td align="center"><input type="button" value="" style="WIDTH: 30px;" id="botao onclick="coleta('*');"></td>
+
+<td align="center"><input type="button" name="percentual" value="%" style="WIDTH: 30px;" onclick="porcento();"> </td>
+
+</tr>
+
+<tr>
+<td align="center"><input type="button" value="1" style="WIDTH: 30px;" id="botaol"
+
+onclick="mostra(1);"></ul> <ul align="center"><input type="button" value="2" style="WIDTH: 30px;" id="botao?" onclick="mostra(2);"></td>
+
+<td align="center"><input type="button" value="3" style="WIDTH: 30px;" style="WIDTH: 30px; id="botao3" onclick="mumtra(3);"></td>
+
+<td align="center"><input type="button" value="" style="WIDTH: 30px;" id="botao" anclick="coleta();"> </ul>
+
+<td align="center"><input type="button" name="inverso" value="1/x" style="WIDTH: 30px;" onclick="inverter();"> </ul>
+
+</tr align="center">
+
+<u>
+
+<td align="center"><input type="button" value="0" style="WIDTH: 30px;" id="botao0" onclick="mostra(0);"/></td>
+
+<td align="center"><input type="button" value="" style="WIDTH: 30px;" name="ponto" id="ponto" onclick="mostra(");"> </td>
+
+<td align="center"><input type="button" value="Cos" style="WIDTH: 30px;" id="Cos" on- click="cos();"></td> <td align="center"><input type="button" value="+" style="WIDTH: 30px;" id="botao+"
+
+onclick="coleta('+');"></td><!-chama a funçao coleta-> <td align="center"><input type="button" value="V" style="WIDTH: 30px;" id="raiza" on- click="raiz();"></td> <!-chama a função raiz->
+
+</tr>
+
+<tr>
+<td align="center"><input type="button" value="1" style="WIDTH: 30px;" id="botaol" onclick="mostra(1);"></td> <td align="center"><input type="button" value="2" style="WIDTH: 30px;" id="botao2"
+
+onclick="mostra(2);"></td> <td align="center"><input type="button" value="3" style="WIDTH: 30px;" style="WIDTH: 30px; id="botao3" onclick="mostra (3);"></td> <td align="center"><input type="button" value="- style="WIDTH: 30px;" id="botao-"
+
+onclick="coleta('-');"></td>
+
+<td align="center"><input type="button" name="inverso" value="1/x" style="WIDTH: 30px;" onclick="inverter();"> </td> </tr align="center">
+
+<tr>
+
+<td align="center"><input type="button" value="0" style="WIDTH: 30px;" id="botao0" onclick="mostra(0);"/></td> <td align="center"><input type="button" value="." style="WIDTH: 30px;" name="ponto"
+
+id="ponto" onclick="mostra(");"> </td> <td align="center"><input type="button" value="Cos" style="WIDTH: 30px;" id="Cos" on- click="cos();"></td>
+
+<td align="center"><input type="button" value=" + " style="WIDTH: 30px;" id="botao+" onclick="coleta('+');"></td><!-chama a função coleta-> <td align="center"><input type="button" value="V" " style="WIDTH: 30px;" id="raizz" on- click="raiz();"></td> <!-chama a funçao raiz->
+
+</tr>
+<td align="center"><input type="button" value="0" style="WIDTH: 30px;" id="botao0" onclick="mostra(0);"/></td> <td align="center"><input type="button" value=" " style="WIDTH: 30px;" name="ponto"
+
+id="ponto" onclick="nostra(");"> </td> <td align="center"><input type="button" value="Cos" style="WIDTH: 30px;" id="Cos" on- click="cos();"></td>
+
+<td align="center"><input type="button" value="+" style="WIDTH: 30px;" id="botao+" onclick="coleta('+');"></td><!-chama a funçao coleta->
+
+<td align="center"><input type="button" value="V" style="WIDTH: 30px;" id="raizz" on- click="raiz();"></td> <!-chaina a funçao raiz->
+
+<tr> <td align="center"><input type="button" name="vazio" size=1 value="" style="WIDTH: 30px;"> </td>
+
+<td align="center"><input onclick="tan();"></td> type="button" value="Tan" style="WIDTH: 30px;" id="tangente"
+
+<td align="center"><input type="button" value="Sen" style="WIDTH: 30px;" id="seno"" on-
+
+click="sen();"></td> <td align="center"><input type="button" value="=" style="WIDTH: 30px;" id="botao=" onclick="calcula();"></td>
+
+<td align="center"><input type="button" value="Pi" style="WIDTH: 30px;" id="a" onclick="pi();"></ </tr></form> </table>
+
+</center>
+
+<h1><font color="#FFFFFF"><center>Instruçoes De Uso</center></font></h1><!-começo das instruçoes->
+<Center>
+<Font color="#FFFFFF">
+<form name="ver">
+<ul>
+<li>A calculadora pode ser usada clicando-se nos botões ou usando o teclado do seu micro
+
+<li>Quando se quer limpar tudo click no botão C ou tecle DEL ou ESC.
+
+<li>Pode-se fazer cálculos em série Ex: 34+24-3/328*3, etc...
+
+<li>A memória só funciona se tiver um número diferente de zero. <li>Para calcular o cos, tan, sen,sqrl digite primeiro o número e depois a operação.
+
+<li>O resutado do cosseno da tangente e do seno sao mostrados em radianos.
+
+<li>Quando se armazena um múmero na memória a indicação M+ fica em vermelho. <br>
+
+Para armazenar um número na memória click no botão M+ ou aperte a tecla m ou M do teclado.<br>
+Para chamar o número que está na memória, click no botão MR ou a teclarou R<br> Para
+
+apagar o número da memória click no botão MC ou tecle c ou C.
+
+<li>O botao CE limpa apenas o número que está no visor.
+</ul>
+
+</form>
+
+</font>
+
+</center>
+
+</body>
+
+</html>"num1="0";
+
+num2="0";
+
+resp="";
+
+Primeiro Numero=true;
+PontoDecimal=false;
+
+memoria="";
+<!-**************->
+<!- * PROGRAMA APERFEIÇOADO POR JEAN CARLO FRANÇA *->
+
+<!-**->
+
+function verificatecla(caracter){
+
+if(window.event) { // Internet Explorer
+
+var tecla = event.keyCode;
+
+//alert (Primeiro Numero);
+
+if((tecla > 47) && (tecla < 58)) { // Se for número tecla tecla - 48;
+
+inostra(tecla);}
+
+if (tecla == 46){ // Se for ponto .
+
+mostra(".");
+
+}
+
+if (tecla == 43){ //Se for + 
+coleta("+");}
+
+if (tecla == 45){ // se for - 
+coleta("-");}
+
+if (tecla == 47){ 
+coleta("/");} // se for /
+
+if (tecla == 42){ 
+coleta("*");} // se for *
+
+if (tecla == 13) { 
+calcula();}
+
+if ((tecla == 44) || (tecla == 27)){ // Se for DEL ou ESC Atalho para Cancela Memória 
+novocalculo();}
+
+if ((tecla == 109) || (tecla == 77)){ // Se for m ou M Atalho para Memória 
+memo();}
+
+if ((tecla == 82) || (tecla == 114)){ // Se for r ou R. Atalho para chamar memória 
+chamamem();}
+
+if ((tecla == 99) || (tecla == 67)){ // Se for c ou C Atalho para cancelar memória cancelamemoria();}
+
+document.formulario.vazio.focus();
+}
+}
+<!-**************->
+function inicio(){
+
+document.formulario.calculo.value="0";
+
+document.formulario.calculo.style.color = "#0000FF";
+
+.formulario.calculo.style.background = "DDDDDD";
+
+document.formulario.vazio.focus();
+
+}
+<!-***************->
+function mostra(x){
+
+if (PrimeiroNumero == true){
+
+document.formulario.calculo.value="0";} if
+
+((PrimeiroNumero== true) && (x!= "")){ document.formulario.calculo.value="";}
+primeiroNumero=false;
+If((x=="." && PontoDecimal==false) || (x!=".")){
+ Document.formulario.calculo.value += x; //essa função vai mostrando os números na caixa de texto
+<!-alinhadireita();->//e o +- vai concateando um número após o outro 
+}
+If(x=="."){
+PontoDecimal=true;}
+}
+<!-***************->
+Function inverter(){
+Var n=eval(document.formulario.calculo.value);
+N = 1/n;
+Document.formulario.calculo.value=n;
+primeiroNumero=true
+PontoDecimal=false;
+Num1=n
+Op='';
+}
+<!-***************->
+function coleta(y){
+
+op=y; //atribui o valor a variavel op o caracter +ou- etc.. conforme o clicado no botao
+num1=eval(document.formulario.calculo.value);} //atribui a num1 o valor da caixa de texto
+
+else{ //limpa a caixa de texto
+
+num2=eval(document.formulario.calculo.value);
+
+document.formulario.calculo.value=eval(num1 +op + num2);
+
+num1=eval(num1 + op + num2 );
+
+op = y
+
+}
+
+}
+<!-**************->
+Function calulca (){
+PontoDecimal=false;
+If(Op!=''){
+num2=document.formulario.calculo.value; //num2 recebe oque esta na caixa de texto. 
+resp=eval(num1 + op + document.formulario.calculo.value); //resp recebe o valor do num1+op+num2, exemplo 2+3
+document.formulario.calculo.value=eval(resp);//retorna o valor dos mesmos 2+3 como resposta na caixa de texto devido ao eval
+
+num1=eval(resp); //se o eval nao estivesse ai apareceria na caixa de texto 2+3. O eval retorna ovalor do 2+3
+
+num2="0";
+
+op=";
+
+}
+
+}
+<!-***************->
+function chamamem(){
+
+PrimeiroNumero=true;
+
+PontoDecimal=false;
+
+if (op=="){
+
+num1=memoria;
+
+document.formulario.calculo.value=num1;}
+
+else{
+
+num2=memoria;
+
+document.formulario.calculo.value=num2;}
+
+}
+<!-**************->
+Function cancelamentos(){
+Memória=0;
+Document.formulario.mem.style.color = "#000000";
+}
+<!-***************->
+function novocalculo(){//essa função permite fazer mais um calculo.
+
+num1="";//limpa as variaveis
+
+num2="";
+
+op="";
+
+resp="";
+
+document.formulario.calculo.value="0";//limpa a caixa de texto
+
+PrimeiroNumero=true;
+
+PontoDecimal=false;
+
+}
+
+function raiz(){ //funçao que calcula a raiz quadrada num1=document.formulario.calculo.value; document.formulario.calculo.value=";
+
+resp=Math.sqrt(num1); //funçao em java script que calcula a raiz quadrada document.formulario.calculo.value=eval(resp); }
+
+function sen(){//funçao que calcula o cosseno
+
+num1=document.formulario.calculo.value;
+
+document.formulario.calculo.value=";
+
+resp=Math.cos(num1);
+
+document.formulario.calculo.value=eval(resp); }
+
+function sen(){//funçao que calcula o seno
+num1=document.formulario.calculo.value; document.formulario.calculo.value="; resp=Math.sin(num1);
+
+document.formulario.calculo.value=eval(resp); }
+
+function tan(){//funçao que calcula a tangente 
+num1=document.formulario.calculo.value; 
+document.formulario.calculo.value=''; resp=Math.tan(num1);
+
+document.formulario.calculo.value=eval(resp); }
+
+function limpa(){
+
+document.formulario.calculo.value="0"; PontoDecimal=false;
+
+<body bgcolor="#000000" onLoad="inicio()" onKeyPress="verificatecla (event)"> <!-aqui co-
+
+
+Primeiro Numero=true;
+
+}
+
+</script>
+
+meça o html->
+
+<center>
+
+<table border="10" cellspacing=0 cellpadding=2 bordercolor="#FF3300">
+
+<u>
+
+<td align="center" colspan=3> <form name="formulario"> <!-aqui foi criado um formulario para a caixa de texto,e un objeto chamado formulario->
+
+</tr>
+
+<input type="text" id="calculo" size 26 style="text-align:right;"></td>
+
+<tr><!-começo da tabela->
+
+<td align="center" colspan=2><input type="button" value="M+" name="mem" style="WIDTH: 70px;font-weight: bold" id="mem1" onclick="memo();"></td><!-onclick chama a função mostra quando clicado->
+
+<td align="center"><input type="button" value="MR" style="WIDTH: 30por;font-weight: bold" id="botaoMR" onclick="chamamem();"></td>
+
+<td align="center"><input type="button" value="MC" style="WIDTH: 30px;font-weight: bold" id="botaoMC" onclick="cancelamemoria();"></td><!-chama a funçao coleta->
+
+<td align="center"><input type="button" value="C" id="rest" style="WIDTH: 30px; font-weight: bold" onclick="novocalculo();"></td> <!-chama a função raiz->
+
+</tr>
+
+<tr>
+
+<td align="center"><input type="button" value="7" style="WIDTH: 30px;" id="botao?" onclick="mostra(7);"></td><!-onclick chama a função mostra quando clicado->
+
+<td align="center"><input type="button" value="8" style="WIDTH: 30px;" id="botao8" onclick "mostra(8);"></td>
+
+<td align="center"><input type="button" value="9" style="WIDTH: 30px;" style="WIDTH: 30px; id="botao 9" onclick="mostra(9);"></td>
+
+<td align="center"><input type="button" value="/" style="WIDTH: 30px;" id="botao/" onclick="coleta('/');"></td>
+
+<td align="center"><input type="button" value="CE" style="WIDTH: 30px;" id="limpal" on- click "limpa();"> </ul> </tr>
+
+<td align="center"><input type="button" value="4" style="WIDTH: 30px;" id="hotao4" onclick="mostra (4);"></td>
+
+<td align="center"><input type="button" value="5" style="WIDTH: 30px;" id="botao5" onclick="mostra(5);"></td>
+
+<td align="center"><input type="button" value="6" style="WIDTH: 30px;" style="WIDTH:
+
+30px; id="botao6" onclick="mostra(6);"></td>
+
+<td align="center"><input type="button" value="" style="WIDTH: 30px;" id="botao onclick="coleta('*');"></td>
+
+<td align="center"><input type="button" name="percentual" value="%" style="WIDTH: 30px;" onclick="porcento();"> </td>
+
+</tr>
+
+<tr>
+<td align="center"><input type="button" value="1" style="WIDTH: 30px;" id="botaol"
+
+onclick="mostra(1);"></ul> <ul align="center"><input type="button" value="2" style="WIDTH: 30px;" id="botao?" onclick="mostra(2);"></td>
+
+<td align="center"><input type="button" value="3" style="WIDTH: 30px;" style="WIDTH: 30px; id="botao3" onclick="mumtra(3);"></td>
+
+<td align="center"><input type="button" value="" style="WIDTH: 30px;" id="botao" anclick="coleta();"> </ul>
+
+<td align="center"><input type="button" name="inverso" value="1/x" style="WIDTH: 30px;" onclick="inverter();"> </ul>
+
+</tr align="center">
+
+<u>
+
+<td align="center"><input type="button" value="0" style="WIDTH: 30px;" id="botao0" onclick="mostra(0);"/></td>
+
+<td align="center"><input type="button" value="" style="WIDTH: 30px;" name="ponto" id="ponto" onclick="mostra(");"> </td>
+
+<td align="center"><input type="button" value="Cos" style="WIDTH: 30px;" id="Cos" on- click="cos();"></td> <td align="center"><input type="button" value="+" style="WIDTH: 30px;" id="botao+"
+
+onclick="coleta('+');"></td><!-chama a funçao coleta-> <td align="center"><input type="button" value="V" style="WIDTH: 30px;" id="raiza" on- click="raiz();"></td> <!-chama a função raiz->
+
+</tr>
+
+<tr>
+<td align="center"><input type="button" value="1" style="WIDTH: 30px;" id="botaol" onclick="mostra(1);"></td> <td align="center"><input type="button" value="2" style="WIDTH: 30px;" id="botao2"
+
+onclick="mostra(2);"></td> <td align="center"><input type="button" value="3" style="WIDTH: 30px;" style="WIDTH: 30px; id="botao3" onclick="mostra (3);"></td> <td align="center"><input type="button" value="- style="WIDTH: 30px;" id="botao-"
+
+onclick="coleta('-');"></td>
+
+<td align="center"><input type="button" name="inverso" value="1/x" style="WIDTH: 30px;" onclick="inverter();"> </td> </tr align="center">
+
+<tr>
+
+<td align="center"><input type="button" value="0" style="WIDTH: 30px;" id="botao0" onclick="mostra(0);"/></td> <td align="center"><input type="button" value="." style="WIDTH: 30px;" name="ponto"
+
+id="ponto" onclick="mostra(");"></td><td align="center"><input type="button" value="Cos" style="WIDTH: 30px;" id="Cos" on- click="cos();"></td>
+
+<td align="center"><input type="button" value=" + " style="WIDTH: 30px;" id="botao+" onclick="coleta('+');"></td><!-chama a função coleta-> <td align="center"><input type="button" value="V" " style="WIDTH: 30px;" id="raizz" on- click="raiz();"></td> <!-chama a funçao raiz->
+
+</tr>
+<td align="center"><input type="button" value="0" style="WIDTH: 30px;" id="botao0" onclick="mostra(0);"/></td> <td align="center"><input type="button" value=" " style="WIDTH: 30px;" name="ponto"
+
+id="ponto" onclick="nostra(");"></td><td align="center"><input type="button" value="Cos" style="WIDTH: 30px;" id="Cos" on- click="cos();"></td>
+
+<td align="center"><input type="button" value="+" style="WIDTH: 30px;" id="botao+" onclick="coleta('+');"></td><!-chama a funçao coleta->
+
+<td align="center"><input type="button" value="V" style="WIDTH: 30px;" id="raizz" on- click="raiz();"></td> <!-chaina a funçao raiz->
+
+<tr> <td align="center"><input type="button" name="vazio" size=1 value="" style="WIDTH: 30px;"> </td>
+
+<td align="center"><input onclick="tan();"></td> type="button" value="Tan" style="WIDTH: 30px;" id="tangente"
+
+<td align="center"><input type="button" value="Sen" style="WIDTH: 30px;" id="seno"" on-
+
+click="sen();"></td> <td align="center"><input type="button" value="=" style="WIDTH: 30px;" id="botao=" onclick="calcula();"></td>
+
+<td align="center"><input type="button" value="Pi" style="WIDTH: 30px;" id="a" onclick="pi();"></ </tr></form> </table>
+
+</center>
+
+<h1><font color="#FFFFFF"><center>Instruçoes De Uso</center></font></h1><!-começo das instruçoes->
+<Center>
+<Font color="#FFFFFF">
+<form name="ver">
+<ul>
+<li>A calculadora pode ser usada clicando-se nos botões ou usando o teclado do seu micro
+
+<li>Quando se quer limpar tudo click no botão C ou tecle DEL ou ESC.
+
+<li>Pode-se fazer cálculos em série Ex: 34+24-3/328*3, etc...
+
+<li>A memória só funciona se tiver um número diferente de zero. <li>Para calcular o cos, tan, sen,sqrl digite primeiro o número e depois a operação.
+
+<li>O resutado do cosseno da tangente e do seno sao mostrados em radianos.
+
+<li>Quando se armazena um múmero na memória a indicação M+ fica em vermelho. <br>
+
+Para armazenar um número na memória click no botão M+ ou aperte a tecla m ou M do teclado.<br>
+Para chamar o número que está na memória, click no botão MR ou a teclarou R<br> Para
+
+apagar o número da memória click no botão MC ou tecle c ou C.
+
+<li>O botao CE limpa apenas o número que está no visor.
+</ul>
+
+</form>
+
+</font>
+
+</center>
+
+</body>
+
+<html>
